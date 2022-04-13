@@ -28,7 +28,7 @@ public class BoardController {
     private BoardVaildator boardVaildator;
 
     @GetMapping("/list")
-    public String list(Model model,@PageableDefault(value = 0,size = 10) Pageable pageable,@RequestParam(required = false,defaultValue = "") String searchText){
+    public String list(Model model,@PageableDefault(value = 0,size = 5) Pageable pageable,@RequestParam(required = false,defaultValue = "") String searchText){
 //        Page<Board> boards = boardRepository.findAllByOrderByIdDesc(pageable);
         Page<Board> boards = boardRepository.findByTitleContainingOrContentContainingOrderByIdDesc(searchText,searchText,pageable);
         int startPage = Math.max(1,((boards.getPageable().getPageNumber()/10)*10)+1);

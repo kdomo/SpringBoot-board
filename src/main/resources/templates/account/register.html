@@ -15,7 +15,7 @@
     
 
     <!-- Bootstrap core CSS -->
-  <link href="https://getbootstrap.com/docs/4.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+<link href="/docs/4.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
 
 
 
@@ -52,9 +52,10 @@
     <link th:href="@{/css/signin.css}" rel="stylesheet">
   </head>
   <body class="text-center">
-    <form class="form-signin" th:action="@{/account/login}" method="post">
-      <a th:href="@{/}"><img class="mb-4" src="https://getbootstrap.com/docs/4.6/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72"></a>
-        <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+    <form class="form-signin" th:action="@{/account/register}" method="post">
+      
+        <a th:href="@{/}"><img class="mb-4" src="https://getbootstrap.com/docs/4.6/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72"></a>
+        <h1 class="h3 mb-3 font-weight-normal">회원가입</h1>
         <label for="username" class="sr-only">Username</label>
         <input type="text" id="username" class="form-control" placeholder="username" name="username" required autofocus>
         <label for="inputPassword" class="sr-only">Password</label>
@@ -64,7 +65,7 @@
             <input type="checkbox" value="remember-me"> Remember me
           </label>
         </div> -->
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">회원가입</button>
         <div class="alert alert-danger" role="alert" th:if="${param.error}">
           Invalid username and password.
         </div>
